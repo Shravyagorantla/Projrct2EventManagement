@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Projrct2EventManagement.Models.EventsAndDecoration>
+
+@{
+    ViewBag.Title = "EventandDecorationView";
+}
+
+<h2>EventandDecorationView</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EventType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DecorationType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DecorationImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DecorationType)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.DecorationImage)
+                </td>*@
+
+            <td>
+                <img src="@Url.Content(item.DecorationImage)" width="250" height="250">
+            </td>
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+
+                @* @Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
+                @Html.ActionLink("Delete", "Delete","EventManager")
+            </td>
+        </tr>
+    }
+
+
+</table>
+<div>
+    @*@Html.ActionLink("Go back to Add another Event", "AddEVentsandDecoration", "EventManager*@
+    @Html.ActionLink("Go back to Menu", "ManagerNavigate")
+
+    </div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+

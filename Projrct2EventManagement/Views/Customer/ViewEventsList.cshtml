@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Projrct2EventManagement.Models.EventsAndDecoration>
+
+@{
+    ViewBag.Title = "ViewEventsList";
+}
+
+<h2>ViewEventsList</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EventType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DecorationType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DecorationImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DecorationType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DecorationImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+           
+        </tr>
+    }
+
+</table>
+<div>
+    @Html.ActionLink("Back to Menu", "CustomerNavigate", "Customer")
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+

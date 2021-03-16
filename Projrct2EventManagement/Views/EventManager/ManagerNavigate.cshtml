@@ -1,0 +1,80 @@
+﻿@*<style>
+    .button {
+        background-color: aquamarine;
+        color: black;
+        border: none;
+    }
+    .button:hover {
+        background-color:aqua;
+        color: black;
+        border:none;
+    }
+    body {
+        background-image: url('C:\Users\admin\source\repos\EventManagementSystemSolution\eventmgmtbg.jpg');
+        background-repeat: no-repeat;
+        width:100%;
+    }
+    </style>*@
+
+<!--<div class="navigateBox"  style="text-align:center" Layout = "~/Views/Shared/_Layout.cshtml">
+    <h2 id="heading">Menu</h2>
+    <p id="firstline">Please select an option :</p>
+    <nav>
+        <div class="actionLinkClass">
+            <p></p>
+            @Html.ActionLink("Add Event And Decoration", "EventsAndDecoration")-->
+@*<input type="button" value="Add Event And Decoration" class="button"  onclick="location.href=' @Url.Action("ManagerNavigate", "EventManager") '" />*@
+<!--</div>
+<br />
+<div class="actionLinkClass">
+    <p></p>
+    @Html.ActionLink("View Event And Decoration", "EventsAndDecoration", new { id=0})-->
+@*<input type="button" value="View Event And Decoration" class="button" onclick="location.href=' @Url.Action("ManagerNavigate", "EventManager",new  {id=0 }) '" />*@
+
+<!--</div>
+<br />-->
+@*<div class="actionLinkClass">
+        <p></p>
+        @Html.ActionLink("Approve Project", "ApproveProject")
+    </div>*@
+<!--</nav>
+</div>-->
+
+
+
+
+<div class="navigateBox" style="text-align:center">
+
+    <h2 id="heading">Welcom to Manager Page</h2>
+    <p id="firstline">Please select an option :</p>
+    <nav>
+        <div class="actionLinkClass">
+            <p></p>
+            @Html.ActionLink("Add Events and Decorations", "AddEVentsandDecoration")
+
+
+        </div>
+        <br />
+        <div class="actionLinkClass">
+            <p></p>
+            @Html.ActionLink("View Events and Decorations", "EventandDecorationView", new { id = 0 })
+        </div>
+        <br />
+
+        <div class="actionLinkClass">
+            <p></p>
+            @Html.ActionLink("View Orders", "ViewOrderDetails")
+        </div>
+        <br/>
+
+        <div>
+            @Html.ActionLink("View Customer FeedBack", "Index", "Feedbacks")
+        </div>
+        <br/>
+
+        <div>
+            @Html.ActionLink("Back to Login", "Login", "UserDetails")
+        </div>
+
+    </nav>
+</div>

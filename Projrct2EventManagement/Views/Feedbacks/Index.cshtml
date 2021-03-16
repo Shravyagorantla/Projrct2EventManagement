@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Projrct2EventManagement.Models.Feedback>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Emailid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerFeedback)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserDetail.Name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emailid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerFeedback)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserDetail.Name)
+            </td>
+           
+        </tr>
+    }
+
+</table>
+<div>
+    @Html.ActionLink("back to list", "CustomerNavigate", "Customer")
+</div>
+
